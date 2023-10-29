@@ -14,6 +14,7 @@ import java.io.PrintWriter;
 public class SecondServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //session เน้นเก็บทางฝั่ง server พวกข้อมูลของ user บลาๆ (มีความปลอดภัยมากกว่า cookies) จะหายไปก็ต่อเมื่อ user ปิด tab ต่างๆ
         HttpSession session = request.getSession();
         String name = (String) session.getAttribute("username");
 
