@@ -15,7 +15,8 @@ public class RoomTheme  extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //this is the name of submit from jsp.
         String roomColor = request.getParameter("userRoomColor");
-
+        
+        //cookies จะเก็บที่ฝั่ง client ซึ่งจะใช้เก็บข้อมูลที่ไม่ได้สำคัญ และ cookies จะมี life-time ว่าจะหมดเมื่อไร และจะเก็บข้อมุลที่ไม่ sensitive มาก
         //set like setAttribute. Same as jsp, when calling it.
         Cookie ck = new Cookie("roomColor", roomColor);
         response.addCookie(ck);
