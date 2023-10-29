@@ -11,6 +11,9 @@
 <head>
     <title>List of available rooms</title>
 </head>
+
+<%-- ${cookie["roomColor"].value} --%>
+
 <body style="background-color: ${cookie.roomColor.value}">
     <table border="2px">
         <c:forEach var="sroom" items="${list}">
